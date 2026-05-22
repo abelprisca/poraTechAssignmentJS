@@ -1,0 +1,104 @@
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(assets/pic2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-style: inherit;
+    color: rgb(227, 222, 231);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+.header{
+    
+    margin-top: 3px;
+    margin-bottom: 25px;
+    padding: 2px;
+    font-size: 20px;
+    color: rgb(252, 252, 252);
+}
+ul{
+    text-decoration: none;
+    display: flex;
+    margin-left: 258px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 20px;
+    margin-top: 1px;
+    text-decoration: none;
+
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a:hover{
+    transform: scale(4);
+    border-bottom: 2px solid rgb(165, 164, 165);
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(222, 225, 228);
+}
+
+.heroSection{
+    height: 100vh;
+    justify-content: center;
+    margin-top: 230px;
+    align-items: center;
+    margin-left: 450px;
+
+}
+.heroSection p{
+    font-size: 50px;
+
+}
+.heroSection h3{
+    font-family: sans-serif;
+    justify-content: center;
+    margin-top: 3px;
+
+}
+.buttons{
+    position: relative;
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+    color: #333;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    border: 2px solid #4a90e2;
+    transition: all 0.3s ease;
+
+}
+.buttons::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #4a90e2;
+    z-index: -1;
+    transition: width 0.4s ease-in;
+}
+.buttons span{
+    position: relative;
+    z-index: -2;
+}
+.buttons::after{
+    width: 100%;
+}
+.buttons:hover{
+    color: white;
+}
