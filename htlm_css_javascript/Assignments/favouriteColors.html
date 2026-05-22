@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment</title>
+</head>
+<body>
+
+
+  <input type="text" id="color" placeholder="Enter a color">
+  <button onclick="addColor()">Add Color</button>
+
+  <button onclick="showColors()">Show Colors</button>
+
+  <p id="display"></p>
+
+  <script>
+    const colors = [];
+
+    function addColor() {
+      const color = document.getElementById("color").value;
+      colors.push(color);
+      document.getElementById("color").value = "";
+    }
+
+    function showColors() {
+      document.getElementById("display").innerHTML =
+        "Your colors: " + colors.join(", ");
+    }
+  </script>
+
+</body>
+</html>
