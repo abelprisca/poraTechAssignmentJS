@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 50px;
+            margin-top: 340px;
+        }
+        button{
+            font-size: 10px;
+            padding: 50;
+            justify-items: start;
+            margin: 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            box-shadow: rgb(14, 9, 9);
+            width: 120px;
+            height: 70px;
+        }
+        button:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<body>
+
+</body>
+<button id="randomBg" style=" background-color: brown; color: aliceblue;">Random Bg</button>
+
+    <button id="click">Click Me</button>
+    <p id="demo"></p>
+
+    <button id="red" style="background-color: red; color: aliceblue;">Bg to Red</button>
+     <button id="blue" style="background-color: blue; color: white;">Bg to Blue</button>
+     <button id="pink" style="background-color: pink; color: black;">Bg to Pink</button>
+    <button id="orange" style="background-color: orange; color: black;">Bg to Orange</button>
+    <button id="aqua" style="background-color: aqua; color: black;">Bg to Aqua</button> 
+    
+    
+    <script>
+
+        document.getElementById("randomBg").addEventListener(
+            "click",
+            function(){
+                const colors = ["pink", 'red', 'blue', 'aqua', 'lightblue', 'lightgreen', 'orange', 'white', 'yellow', ]
+                const randomColors = colors[Math.floor(Math.random() * colors.length)];
+                document.body.style.backgroundColor = randomColors 
+            }
+        )
+
+        document.getElementById("click").addEventListener
+        ("click", 
+            function(){
+                document.getElementById("demo").textContent = "Button clicked"
+            }
+        );
+
+
+           document.getElementById('red').addEventListener('click', 
+            function(){
+                document.body.style.backgroundColor = "red"
+            }
+        )
+
+     
+         document.getElementById('blue').addEventListener('click', 
+            function(){
+                document.body.style.backgroundColor = "blue"
+            }
+        )
+
+        document.getElementById('orange').addEventListener("click", 
+            function(){
+                document.body.style.backgroundColor= "orange"
+            }
+        )
+
+        document.getElementById('pink').addEventListener('click', 
+            function(){
+            document.body.style.backgroundColor = "pink"
+            }
+        )
+
+        document.getElementById('pink').addEventListener("click", 
+            function(){
+                document.body.style.backgroundColor= "pink"
+            }
+        )
+        document.getElementById('aqua').addEventListener("click", 
+            function(){
+                document.body.style.backgroundColor= "aqua"
+            }
+        )
+        
+
+        
+    </script>
+</body>
+</html>
