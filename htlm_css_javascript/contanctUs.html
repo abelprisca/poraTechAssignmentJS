@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>This is a contact form</p>
+
+<form action="form" id="myform" style="color: rgb(99, 6, 6); border: 500px;">
+
+    <legend>Contact us</legend>
+<label for="fname" > First Name</label>
+<input type="text" name="fname" id="fname"  placeholder="Priscilla" required><br> <br>
+<label for="lname">Last Name</label>
+<input type="text" name="lname" id="lname" placeholder="Abel" required><br><br>
+<label for="comment">Comment</label><br>
+<textarea name="comment" id="comment" cols="17" rows="4" required placeholder="Enter Your comment here "></textarea>
+<label for="password">Password</label>
+<input type="password" name="password" id="password">
+<br> <br>
+<input type="button" name="submit" id="submit" value="Submit">
+</form>
+<div id="form-data"></div>
+<script>
+    document.getElementById('submit').addEventListener('click', 
+        function(event){
+            event.preventDefault();
+         const firstname=  document.getElementById('fname').value;
+        const lastname = document.getElementById('lname').value;
+        const comment = document.getElementById('comment').value;
+        const password = document.getElementById('password').value;
+
+
+            if (firstname === ''){
+                alert("First name cannot be empty")
+
+            }
+            else if( lastname=== "") {
+                alert("Last name cannot be empty")
+
+            }
+            else{
+                alert('invalid First Name or LastName')
+            }
+            if (password === ""){
+                alert('password cannot be empty')
+            }
+            else if (password < 8){
+                alert("password must not be less than 8")
+            }
+            else if (password.lenth < 8){
+                
+            alert('your password must be more than 8')
+            }
+
+        
+        
+        const results = firstname + " " + lastname + " " + ":" + comment;
+    
+        document.getElementById('form-data').innerHTML = results
+    
+    }
+    )
+</script>
+</body>
+</html>
